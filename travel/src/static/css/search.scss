@@ -1,0 +1,141 @@
+.search {
+  height: 3.75rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
+
+  .column {
+    float: left;
+  }
+
+  .center {
+    width: 100%;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    display: flex;
+    justify-content: center;
+
+    .nav {
+      position: relative;
+      overflow: hidden;
+
+      .nav-title {
+        padding: 0 1rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        width: 0;
+        height: 0.125rem;
+        background-color: #000;
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+
+        &+.nav::after {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .left {
+    width: 25rem;
+    margin-left: -100%;
+    position: relative;
+    right: 25rem;
+
+    .pre-logo-svg {
+      padding-left: 3rem;
+    }
+  }
+
+  .right {
+    width: 25rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    margin-right: -25rem;
+    display: flex;
+    justify-content: flex-end;
+
+    .search-button {
+      position: relative;
+      padding: 0 12px;
+
+      .search-input {
+        position: relative;
+        height: 2.5rem;
+        width: 8.125rem;
+        background: #f5f5f5;
+        outline: none;
+        border: 0;
+        border-radius: 1.25rem;
+        padding-left: 2.5rem;
+        font-size: 1rem;
+
+        &:hover {
+          background: #ebe7e7;
+        }
+      }
+
+      input::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #d4c2c2;
+      }
+
+      input:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #d4c2c2;
+      }
+
+      input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #d4c2c2;
+      }
+
+      input:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: #d4c2c2;
+      }
+
+      .pre-search-input-icon {
+        position: absolute;
+        z-index: 2;
+        top: 1.125rem;
+        left: 1.25rem;
+      }
+    }
+
+    .favorite {
+      padding: 0 0.75rem;
+
+      &:hover {
+        background: #ebe7e7;
+      }
+
+      .favorite-icon {
+        margin-top: 1.125rem;
+      }
+    }
+
+    .shopping-cart {
+      &:hover {
+        background: #ebe7e7;
+      }
+
+      margin-right: 3.5rem;
+      padding: 0 0.75rem;
+
+      .shopping-icon {
+        margin-top: 1.125rem;
+      }
+    }
+  }
+}
