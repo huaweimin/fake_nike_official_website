@@ -30,7 +30,7 @@
             <div v-show="helpShow" class="help main">
               <ul>
                 <li v-for="(item, index) in helpList" :key="index">
-                  {{ item }}
+                  <a href="#">{{ item }}</a>
                 </li>
               </ul>
             </div>

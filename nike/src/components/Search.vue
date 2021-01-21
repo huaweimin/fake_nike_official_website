@@ -57,6 +57,15 @@
         </div>
       </div>
     </div>
+    <div v-for="(item, index) in navsList" :key="index" class="mask-layer">
+      <ul v-for="(item2, index2) in navsList[index].list" :key="index2">
+        <li>
+          <a v-for="(item3, index3) in item2.content" :key="index3" href="#">
+            <span class="list">{{ item3 }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -81,6 +90,28 @@ export default {
           name: "2021新年特辑",
         },
       ],
+      navsList: [
+        {
+          name: '男子',
+          list: [
+            {
+              content: ['精选推荐', '2021新春特辑', '新春特惠 岂止五折', '人气热销', '最新上市', 'SNKRS 新品预览', '会员限定']
+            },
+            {
+              content: ['鞋类', '所有鞋类', '休闲', '跑步', '篮球', '足球', '健身/训练', 'Jordan', '拖鞋', '当季尖货', 'Air Jordan 1', 'Air Force 1', 'Air Max', '专属定制', '最新运动鞋']
+            },
+            {
+              content: ['服装', '所有服装', '连帽衫/卫衣', '外套/夹克', '紧身运动服/Baselayer', '运动裤/紧身裤', '休闲裤', '上衣/T恤', '翻领T恤', '球衣', '短裤', '袜子', 'Air Max', '配件/装备']
+            },
+            {
+              content: ['品牌', 'Jordan', 'NBA', 'NikeLab', 'Nike Sportswear', 'ACG', '专属定制']
+            },
+            {
+              content: ['运动', '跑步', '篮球', '足球', '健身/训练', '瑜伽', '滑板', '网球', '高尔夫']
+            }
+          ]
+        }
+      ]
     };
   },
 };
