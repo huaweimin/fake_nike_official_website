@@ -34,7 +34,10 @@
                 <ul
                   v-for="(item2, index2) in item.content"
                   :key="index2"
-                  :class="{ listTitle: index2 == 0, womenTitle: item2 == '运动内衣' }"
+                  :class="{
+                    listTitle: index2 == 0,
+                    title: item2 == '运动内衣',
+                  }"
                 >
                   <li>
                     <a href="#">{{ item2 }}</a>
@@ -54,7 +57,10 @@
                 <ul
                   v-for="(item2, index2) in item.content"
                   :key="index2"
-                  :class="{ listTitle: index2 == 0, womenTitle: item2 == '运动内衣' }"
+                  :class="{
+                    listTitle: index2 == 0,
+                    title: item2 == '男孩服装' || item2 == '女孩服装',
+                  }"
                 >
                   <li>
                     <a href="#">{{ item2 }}</a>
@@ -66,7 +72,23 @@
           <li class="nav-title">
             专属定制
             <div class="drop-down-list">
-              <div>000</div>
+              <div
+                v-for="(item, index) in customMade"
+                :key="index"
+                class="list-content"
+              >
+                <ul
+                  v-for="(item2, index2) in item.content"
+                  :key="index2"
+                  :class="{
+                    listTitle: item2 == '男子定制' || item2 == '女子定制',
+                  }"
+                >
+                  <li>
+                    <a href="#">{{ item2 }}</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="nav-title">2021新年特辑</li>
@@ -267,7 +289,7 @@ export default {
             "运动内衣选购指南",
             "跑步运动内衣",
             "舞蹈运动内衣",
-            "瑜伽运动内衣"
+            "瑜伽运动内衣",
           ],
         },
         {
@@ -293,7 +315,7 @@ export default {
             "网球",
             "高尔夫",
           ],
-        }
+        },
       ],
       children: [
         {
@@ -363,76 +385,41 @@ export default {
       customMade: [
         {
           content: [
-            "精选推荐4",
-            "2021新春特辑",
-            "新春特惠 岂止五折",
-            "人气热销",
-            "最新上市",
-            "SNKRS 新品预览",
-            "会员限定",
+            "Nike By You 最新定制",
+            "Nike By You 所有定制",
+            "Nike By You 篮球"
           ],
         },
         {
           content: [
-            "鞋类",
-            "所有鞋类",
+            "男子定制",
+            "所有男子定制",
             "休闲",
             "跑步",
             "篮球",
             "足球",
-            "健身/训练",
-            "Jordan",
-            "拖鞋",
-            "当季尖货",
-            "Air Jordan 1",
-            "Air Force 1",
-            "Air Max",
-            "专属定制",
-            "最新运动鞋",
+            "健身",
+            "滑板"
           ],
         },
         {
           content: [
-            "服装",
-            "所有服装",
-            "连帽衫/卫衣",
-            "外套/夹克",
-            "紧身运动服/Baselayer",
-            "运动裤/紧身裤",
-            "休闲裤",
-            "上衣/T恤",
-            "翻领T恤",
-            "球衣",
-            "短裤",
-            "袜子",
-            "Air Max",
-            "配件/装备",
-          ],
-        },
-        {
-          content: [
-            "品牌",
-            "Jordan",
-            "NBA",
-            "NikeLab",
-            "Nike Sportswear",
-            "ACG",
-            "专属定制",
-          ],
-        },
-        {
-          content: [
-            "运动",
+            "女子定制",
+            "所有女子定制",
+            "休闲",
             "跑步",
             "篮球",
             "足球",
-            "健身/训练",
-            "瑜伽",
-            "滑板",
-            "网球",
-            "高尔夫",
+            "健身",
+            "滑板"
           ],
         },
+        {
+          content: [
+            "Air Max By You",
+            "Blazer By You"
+          ],
+        }
       ],
     };
   },

@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+
+  .center {
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .left {
+    width: 25%;
+  }
+
+  .right {
+    width: 25%;
+  }
+
+}
+
+.column {
+  float: left;
+}

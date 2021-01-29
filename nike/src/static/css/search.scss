@@ -34,9 +34,9 @@
         }
 
         .drop-down-list {
-          background: pink;
           visibility: hidden;
           position: absolute;
+          z-index: 99;
           left: 0;
           top: 3.875rem;
           width: 75rem;
@@ -44,6 +44,7 @@
           display: flex;
           justify-content: space-around;
           line-height: 25px;
+          background: rgba($color: #fff, $alpha: 1.0);
 
           .list-content {
 
@@ -61,7 +62,7 @@
               }
             }
 
-            .womenTitle {
+            .title {
               margin: 20px 0 15px;
               li {
                 a {
